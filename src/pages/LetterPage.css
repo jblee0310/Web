@@ -1,0 +1,114 @@
+/* In src/pages/LetterPage.css */
+
+/*
+  This container sets up the gradient background and centers the letter content.
+*/
+.letter-page-container {
+  min-height: 100vh;
+  padding: 120px 2rem 2rem 2rem; 
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the letter box vertically and horizontally */
+  box-sizing: border-box;
+
+  /* --- The same gradient as your homepage main-section --- */
+  background: linear-gradient(135deg, #27374D, #526D82);
+}
+
+/* 
+  This container holds all the text. We'll use it to set a max-width.
+  It has NO background color itself.
+*/
+.letter-content {
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+  text-align: center; /* Center all the text */
+  font-family: 'Nanum Pen Script', cursive;
+  color: #E2E8F0; /* The soft off-white text color */
+}
+
+
+/* --- Base styles for all animating text elements --- */
+/* We target h1, p, and .signature inside the letter-content */
+.letter-content > * {
+  /* Start a little bit lower and completely invisible */
+  transform: translateY(20px);
+  opacity: 0;
+  
+  /* Tell the browser to animate the change of these properties */
+  /* This creates the smooth slide-and-fade effect */
+  animation: popUp 0.8s ease-out forwards;
+}
+
+
+/* The main "To My Dearest," heading */
+.letter-content h1 {
+  font-size: 4rem;
+  margin-bottom: 2.5rem;
+  font-weight: normal;
+  text-shadow: 0 2px 15px rgba(0,0,0,0.5);
+  
+  /* --- Staggered Animation Delay --- */
+  animation-delay: 0.2s; /* The heading appears first */
+}
+
+/* The main paragraphs of the letter */
+.letter-content p {
+  font-size: 2.5rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* --- Staggered Animation Delays for each paragraph --- */
+/* Each paragraph will pop up after the previous one */
+.letter-content p:nth-of-type(1) {
+  animation-delay: 0.6s; 
+}
+.letter-content p:nth-of-type(2) {
+  animation-delay: 1.0s;
+}
+.letter-content p:nth-of-type(3) {
+  animation-delay: 1.4s; /* Add more for more paragraphs */
+}
+
+
+/* The signature at the end */
+.signature {
+  margin-top: 4rem;
+  font-size: 2.8rem;
+  
+  /* --- Staggered Animation Delay --- */
+  animation-delay: 1.8s; /* The signature appears last */
+}
+
+
+/* --- THE ANIMATION KEYFRAMES --- */
+/* Add this at the very bottom of the file */
+@keyframes popUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* --- Responsive Design for Mobile --- */
+@media screen and (max-width: 768px) {
+  .letter-content {
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .letter-content h1 {
+    font-size: 3rem;
+  }
+
+  .letter-content p {
+    font-size: 2rem;
+  }
+
+  .signature {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,95 @@
+/*
+  This is the complete CSS for your header layout, with individually
+  framed buttons and a right-aligned 'z' button.
+*/
+
+/* ========================================================= */
+/* 1. Main Header Container Styling                          */
+/* ========================================================= */
+.main-header {
+  /* Positioning and Sizing */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  z-index: 10;
+  box-sizing: border-box;
+  
+  /* Background should be transparent to show the page gradient */
+  background: transparent;
+  
+  /* Padding creates the space at the edges of the screen */
+  padding: 0 2rem;
+
+  /* --- Flexbox Layout --- */
+  display: flex;
+  align-items: center; /* Vertically centers everything */
+  gap: 1.2rem;       /* The default space between items on the left */
+}
+
+
+/* ========================================================= */
+/* 2. General Text and Link Styling                          */
+/* ========================================================= */
+
+/* Style for the main "brand" link */
+.main-header > a:first-of-type {
+  color: #E2E8F0; /* Your requested font color */
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  /* Remove any button styling from the main name link */
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+.main-header > a:first-of-type:hover {
+  color: white; /* A slightly brighter hover */
+}
+
+/* Style for the "|" separator */
+.nav-separator {
+  color: #E2E8F0;
+  opacity: 0.5;
+  font-size: 1.5rem;
+}
+
+
+/* ========================================================= */
+/* 3. The Framed Button Style (`.nav-button`)                */
+/* ========================================================= */
+
+.nav-button {
+  /* Text styling */
+  color: #E2E8F0; /* Your requested font color */
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  
+  /* The "Pill" shape and frame */
+  padding: 0.25rem 1rem;
+  border: 2px solid rgba(226, 232, 240, 0.3); /* Subtle white border */
+  border-radius: 50px;
+  background-color: rgba(45, 55, 72, 0.2); /* A semi-transparent dark grey-blue */
+  
+  /* Smooth transition for hover effects */
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(45, 55, 72, 0.4);
+  border-color: rgba(226, 232, 240, 0.7);
+  transform: translateY(-2px); /* Lifts the button slightly */
+}
+
+
+/* ========================================================= */
+/* 4. The Positioning Magic for the Right-Side Button        */
+/* ========================================================= */
+
+.nav-item-right {
+  /* This tells this specific button to take all available space to its left */
+  margin-left: auto;
+}

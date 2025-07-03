@@ -1,0 +1,103 @@
+/* In src/components/ResultsDisplay.css */
+
+/* ========================================================= */
+/* 1. Results Header (Title & Modify Button)                 */
+/* ========================================================= */
+.results-header {
+  /* This turns the container into a flexbox */
+  display: flex;
+  /* This pushes the title to the left and the button to the right */
+  justify-content: space-between;
+  /* This vertically centers the title and button */
+  align-items: center;
+  
+  max-width: 1400px;
+  margin: 0 auto 3rem auto;
+}
+
+.preference-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0;
+  color: white;
+  padding-right: 2rem; /* Adds space so text doesn't touch the button */
+}
+
+.modify-btn {
+  /* The button is now a simple flex item, no absolute positioning */
+  background-color: #4A5568;
+  color: #E2E8F0;
+  border: 1px solid #a3b3ff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  flex-shrink: 0; /* Prevents the button from shrinking */
+  font-weight: bold;
+}
+.modify-btn:hover {
+  background-color: #5d6d85;
+}
+
+/* ========================================================= */
+/* 2. Results Section (The Three Columns)                    */
+/* ========================================================= */
+.preference-section {
+  max-width: 1400px;
+  margin: 0 auto 4rem auto;
+}
+.preference-section h2 {
+  font-size: 2rem;
+  color: #a3b3ff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.columns-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.preference-column {
+  background-color: #4A5568;
+  padding: 1.5rem;
+  border-radius: 12px;
+  flex: 1;
+  min-height: 200px; /* Ensures columns have a minimum height */
+}
+.preference-column.shared {
+  background-color: transparent;
+  border: 2px dashed #a3b3ff;
+}
+.preference-column h3 {
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(160, 174, 192, 0.3);
+  text-align: center;
+}
+.preference-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.preference-column li {
+  background-color: #2D3748;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* ========================================================= */
+/* 3. Responsive Design for Smaller Screens                  */
+/* ========================================================= */
+@media screen and (max-width: 900px) {
+  .results-header {
+    flex-direction: column; /* Stack title and button */
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .columns-container {
+    flex-direction: column; /* Stack the three columns */
+  }
+}
