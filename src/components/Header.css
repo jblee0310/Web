@@ -93,3 +93,7 @@
   /* This tells this specific button to take all available space to its left */
   margin-left: auto;
 }
+
+.timer-container {
+  margin-left: auto;
+}

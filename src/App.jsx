@@ -29,6 +29,8 @@ function App() {
         {/* { <Route path="/" element={<StoryPage />} /> } */}
         <Route path="/n줄평" element={<NGridPage />} /> {/* <-- ADD ROUTE */}
         <Route path="/our-preference" element={<DiscoveryPage />} />
+        <Route path="/timeline" element={<HomePage />} />
+
 
 
       </Routes>
