@@ -14,7 +14,7 @@ function CountUpTimer({ startDate }) {
 
     if (difference > 0) {
       timeElapsed = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        days: Math.floor(difference / (1000 * 60 * 60 * 24))+1,
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
         seconds: Math.floor((difference / 1000) % 60),

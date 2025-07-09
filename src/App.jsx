@@ -28,7 +28,7 @@ function App() {
         {/* You can add more routes here for other pages */}
         {/* { <Route path="/" element={<StoryPage />} /> } */}
         <Route path="/n줄평" element={<NGridPage />} /> {/* <-- ADD ROUTE */}
-        <Route path="/our-preference" element={<DiscoveryPage />} />
+        <Route path="/tmi" element={<DiscoveryPage />} />
         <Route path="/timeline" element={<HomePage />} />
 
 

@@ -20,7 +20,7 @@ function Header() {
       
       {/* --- Right-Side Item --- */}
       {/* Give 'z' the common class AND a special class for positioning */}
-      <a href="/our-preference" className="nav-button">취향테스트</a>
+      <a href="/tmi" className="nav-button">TMI 방출하기</a>
       <div className="timer-container">
         <CountUpTimer startDate={anniversaryDate} />
       </div>

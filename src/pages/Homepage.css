@@ -43,6 +43,7 @@
 .letter {
   display: inline-block;
   margin-top: 2.5rem;
+  margin-right: 1.5rem;
   padding: 1rem 2.5rem;
   background-color: transparent;
   color: #a3b3ff;
