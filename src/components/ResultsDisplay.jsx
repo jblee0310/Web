@@ -23,7 +23,7 @@ function ResultsDisplay({ myChoices, herChoices, onModifyClick }) {
   return (
     <div className="results-container">
       <div className="results-header">
-        <h1 className="preference-title">Our Preferences</h1>
+        <h1 className="preference-title">TMI 결과</h1>
         {/* This button's only job is to call the function passed from the parent */}
         <button className="modify-btn" onClick={onModifyClick}>
           Modify
@@ -31,23 +31,13 @@ function ResultsDisplay({ myChoices, herChoices, onModifyClick }) {
       </div>
       
       <section className="preference-section">
-        <h2>Things We Love ❤️</h2>
         <div className="columns-container">
-          <div className="preference-column"><h3>You</h3><ul>{likes.mine.map(i => <li key={i}>{i}</li>)}</ul></div>
-          <div className="preference-column shared"><h3>Us</h3><ul>{likes.shared.map(i => <li key={i}>{i}</li>)}</ul></div>
-          <div className="preference-column"><h3>Her</h3><ul>{likes.hers.map(i => <li key={i}>{i}</li>)}</ul></div>
+          <div className="preference-column"><h3>종빈</h3><ul>{likes.mine.map(i => <li key={i}>{i}</li>)}</ul></div>
+          <div className="preference-column shared"><h3>공통</h3><ul>{likes.shared.map(i => <li key={i}>{i}</li>)}</ul></div>
+          <div className="preference-column"><h3>주연</h3><ul>{likes.hers.map(i => <li key={i}>{i}</li>)}</ul></div>
         </div>
       </section>
 
-      {/* DISLIKES SECTION */}
-      <section className="preference-section">
-        <h2>Things We Don't 💔</h2>
-        <div className="columns-container">
-          <div className="preference-column"><h3>You</h3><ul>{dislikes.mine.map(i => <li key={i}>{i}</li>)}</ul></div>
-          <div className="preference-column shared"><h3>Us</h3><ul>{dislikes.shared.map(i => <li key={i}>{i}</li>)}</ul></div>
-          <div className="preference-column"><h3>Her</h3><ul>{dislikes.hers.map(i => <li key={i}>{i}</li>)}</ul></div>
-        </div>
-      </section>
     </div>
   );
 }

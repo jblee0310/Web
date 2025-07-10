@@ -5,6 +5,7 @@ import HomePage from './pages/Homepage.jsx';
 import LetterPage from './pages/LetterPage.jsx';
 import NGridPage from './pages/NGridPage.jsx'; 
 import DiscoveryPage from './pages/DiscoveryPage.jsx';
+import CouponPage from './pages/CouponPage.jsx';
 
 
 // Import other pages like StoryPage here later
@@ -30,6 +31,7 @@ function App() {
         <Route path="/n줄평" element={<NGridPage />} /> {/* <-- ADD ROUTE */}
         <Route path="/tmi" element={<DiscoveryPage />} />
         <Route path="/timeline" element={<HomePage />} />
+        <Route path="/coupon" element={<CouponPage />} />
 
 
 

@@ -46,13 +46,13 @@ function HomePage() {
           
           {/* --- The Left Column (Congratulatory Message) --- */}
           <div className="left-column">
-            <p className="main-subtitle">filler</p>
-            <h1 className="main-title">MAIN</h1>
+            <p className="main-subtitle">앞으로도 쭉 행복한 연애하자~</p>
+            <h1 className="main-title">100일 축하해!!!</h1>
             <p className="main-description">
-              filler
+              
             </p>
             <a href="/letter" className="letter">
-              100일 편지
+              100일 편지 읽기
             </a>
             <a href="#timeline" className="letter">
               타임라인 보기
@@ -77,7 +77,7 @@ function HomePage() {
       {/* --- SECTION 2: The New Timeline Section --- */}
       {/* --- ADD THIS ENTIRE SECTION BELOW THE FIRST ONE --- */}
       <section className="timeline-section" id="timeline">
-        <h2 className="section-title">Major Dates</h2>
+        <h2 className="section-title">타임라인</h2>
         <div className="timeline-container">
           {timelineData.map((data, idx) => (
             <TimelineItem data={data} index={idx} key={idx} />

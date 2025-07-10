@@ -81,8 +81,8 @@ function DiscoveryPage() {
         <Header />
         <div className="discovery-page-container">
           <div className="discovery-header">
-            <h1>What Are Your Preferences?</h1>
-            <p>Choose Like (✓) or Dislike (✗) for each item. Your choices will be saved automatically.</p>
+            <h1>종빈과 주연이의 TMI는?!</h1>
+            <p>Yes (✓) 또는 No (✗)를 누르면 저장됩니다.</p>
           </div>
           <div className="discovery-grid">
             {itemsToDiscover.map(item => (
@@ -135,8 +135,8 @@ function DiscoveryPage() {
                   <div key={item} className="modify-item">
                     <span>{item}</span>
                     <div className="modify-buttons">
-                      <button onClick={() => handleModifyChoice(item, true)} className={herChoices[item] === true ? 'active' : ''}>Like</button>
-                      <button onClick={() => handleModifyChoice(item, false)} className={herChoices[item] === false ? 'active' : ''}>Dislike</button>
+                      <button onClick={() => handleModifyChoice(item, true)} className={herChoices[item] === true ? 'active' : ''}>Yes</button>
+                      <button onClick={() => handleModifyChoice(item, false)} className={herChoices[item] === false ? 'active' : ''}>No</button>
                     </div>
                   </div>
                 ))}

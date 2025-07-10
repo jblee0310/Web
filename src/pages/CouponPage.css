@@ -1,0 +1,94 @@
+/* In src/pages/CouponPage.css */
+
+.coupon-page-container {
+  min-height: 100vh;
+  padding: 120px 2rem 4rem 2rem;
+  box-sizing: border-box;
+  background-color: #2D3748;
+  color: #E2E8F0;
+}
+
+.page-title, .page-subtitle, .page-subsubtitle {
+  text-align: center;
+}
+.page-title { font-size: 3rem; font-weight: 900; margin-bottom: 0.5rem; }
+.page-subtitle { font-size: 1.1rem; color: #A0AEC0; margin-top: 0; margin-bottom: 0rem; }
+.page-subsubtitle { font-size: .75rem; color: #A0AEC0; margin-top: 0; margin-bottom: 4rem; }
+
+.coupons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* --- THE NEW COUPON DESIGN --- */
+.coupon-container {
+  background-color: #4A5568;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-top: 5px solid; /* The color will be set by inline style */
+  height: 220px;
+  transition: all 0.3s ease; /* A smooth transition for all changes */
+}
+
+/* --- THIS IS THE STYLE FOR A REDEEMED COUPON --- */
+.coupon-container.is-redeemed {
+  /* Make it look "used" by making it less prominent */
+  opacity: 0.6;
+  background-color: #38495a; /* A darker background */
+}
+
+.coupon-header { padding: 1rem 1.5rem; }
+.coupon-header h3 { margin: 0; font-size: 1.4rem; color: white; }
+.coupon-body { padding: 0 1.5rem; flex-grow: 1; }
+.coupon-body p { margin: 0; font-size: 1rem; color: #A0AEC0; }
+.coupon-footer { padding: 1rem 1.5rem; text-align: right; }
+
+.redeem-btn {
+  background-color: #a3b3ff;
+  color: #1A202C;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.redeem-btn:hover {
+  background-color: #8c9eff;
+}
+
+/* This is the text that appears after redeeming */
+.redeemed-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2ecc71; /* A nice green to indicate success */
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #2ecc71;
+  border-radius: 6px;
+  background-color: rgba(46, 204, 113, 0.1);
+}
+
+/* --- The Reset button styling remains the same --- */
+.reset-button-container {
+  margin-top: 4rem;
+  text-align: center;
+}
+.reset-all-btn {
+  background: none;
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.reset-all-btn:hover {
+  background-color: #e74c3c;
+  color: white;
+}
