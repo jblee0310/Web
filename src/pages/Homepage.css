@@ -27,7 +27,7 @@
 
   background: radial-gradient(
     circle at 50% 0%, 
-    #485a70 40%,   /* Brighter, more saturated Slate Blue */
+    #f4b5e2 40%,   /* Brighter, more saturated Slate Blue */
     #273444 90%   /* This MUST match your new body background */
   );
 }
