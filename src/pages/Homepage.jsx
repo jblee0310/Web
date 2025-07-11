@@ -3,9 +3,12 @@ import Header from '../components/Header.jsx';
 import './HomePage.css';
 
 // Import your images (make sure these paths are correct)
-import photo1 from '../assets/1.jpeg';
-import photo2 from '../assets/2.jpeg';
-import photo3 from '../assets/3.jpeg';
+import photo1 from '../assets/1.jpg';
+import photo2 from '../assets/2.jpg';
+import photo3 from '../assets/3.jpg';
+import photo4 from '../assets/4.jpg';
+import photo5 from '../assets/5.jpg';
+import photo6 from '../assets/6.jpg';
 import { timelineData } from '../timelineData.js';
 
 // --- HELPER COMPONENT FOR A SINGLE TIMELINE EVENT ---
@@ -24,7 +27,7 @@ const TimelineItem = ({ data, index }) => (
 );
 function HomePage() {
   // This slideshow logic is still perfect for the image display
-  const slideshowImages = [photo1, photo2, photo3];
+  const slideshowImages = [photo1, photo2, photo3, photo4, photo5, photo6];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
