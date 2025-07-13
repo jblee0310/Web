@@ -12,7 +12,8 @@ import CouponPage from './pages/CouponPage.jsx';
 
 function App() {
   return (
-    <BrowserRouter>
+      <BrowserRouter basename="/Web/">
+
       <Routes>
         {/* 
           This route says: When the user is at the base URL "/",
