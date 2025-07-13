@@ -93,3 +93,59 @@
   background-color: #e74c3c;
   color: white;
 }
+
+/* --- NEW STYLES FOR REVERSE COUPON SECTION --- */
+/* ========================================================= */
+
+.reveal-section {
+  text-align: center;
+  margin-top: 5rem;
+}
+.reveal-btn {
+  background: none;
+  border: 2px solid #D850D6;
+  color: #D850D6;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: pulseBorder 3s infinite ease-in-out;
+}
+.reveal-btn:hover {
+  background: #D850D6;
+  color: white;
+  transform: scale(1.05);
+  animation: none;
+}
+.reverse-coupons-container {
+  animation: fadeInAndUp 0.6s ease-out;
+}
+.reverse-title {
+  font-size: 2.5rem;
+  color: #54426B;
+  margin-bottom: 0.5rem;
+}
+/* Distinguish the reverse coupons */
+.coupon-container.reverse {
+  background-color: #fff9f9;
+  border-color: #ff7b7b;
+}
+
+/* --- NEW ANIMATION --- */
+@keyframes fadeInAndUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pulseBorder {
+  0% { box-shadow: 0 0 0 0 rgba(216, 80, 214, 0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(216, 80, 214, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(216, 80, 214, 0); }
+}
