@@ -17,7 +17,10 @@
   box-sizing: border-box;
   
   /* Background should be transparent to show the page gradient */
-  background: transparent;
+  /* background: transparent; */
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   
   /* Padding creates the space at the edges of the screen */
   padding: 0 2rem;
@@ -35,7 +38,7 @@
 
 /* Style for the main "brand" link */
 .main-header > a:first-of-type {
-  color: #E2E8F0; /* Your requested font color */
+  color: #54426B; /* Your requested font color */
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
@@ -46,12 +49,12 @@
   padding: 0;
 }
 .main-header > a:first-of-type:hover {
-  color: white; /* A slightly brighter hover */
+  color: #3d2d4f; /* A slightly brighter hover */
 }
 
 /* Style for the "|" separator */
 .nav-separator {
-  color: #E2E8F0;
+  color: #54426B;
   opacity: 0.5;
   font-size: 1.5rem;
 }
@@ -63,24 +66,24 @@
 
 .nav-button {
   /* Text styling */
-  color: #E2E8F0; /* Your requested font color */
+  color: #54426B;
+  border: 1px solid rgba(84, 66, 107, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 600;
   
   /* The "Pill" shape and frame */
   padding: 0.25rem 1rem;
-  border: 2px solid rgba(226, 232, 240, 0.3); /* Subtle white border */
   border-radius: 50px;
-  background-color: rgba(45, 55, 72, 0.2); /* A semi-transparent dark grey-blue */
   
   /* Smooth transition for hover effects */
   transition: all 0.3s ease;
 }
 
 .nav-button:hover {
-  background-color: rgba(45, 55, 72, 0.4);
-  border-color: rgba(226, 232, 240, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(84, 66, 107, 0.7);
   transform: translateY(-2px); /* Lifts the button slightly */
 }
 

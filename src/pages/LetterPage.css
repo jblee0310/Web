@@ -12,7 +12,7 @@
   box-sizing: border-box;
 
   /* --- The same gradient as your homepage main-section --- */
-  background: linear-gradient(135deg, #27374D, #526D82);
+  background: linear-gradient(135deg, #FAD0C4, #E8D9F3);
 }
 
 /* 
@@ -22,10 +22,11 @@
 .letter-content {
   max-width: 800px;
   width: 100%;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center; /* Center all the text */
-  font-family: 'Nanum Pen Script', cursive;
-  color: #E2E8F0; /* The soft off-white text color */
+  font-family: 'Patrick Island', 'Gaegu', 'Indie Flower', 'Nanum Pen Script', cursive;
+  color: #54426B; /* The soft off-white text color */
+  text-shadow: none;
 }
 
 
@@ -44,7 +45,7 @@
 
 /* The main "To My Dearest," heading */
 .letter-content h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 2.5rem;
   font-weight: normal;
   text-shadow: 0 2px 15px rgba(0,0,0,0.5);
@@ -55,7 +56,7 @@
 
 /* The main paragraphs of the letter */
 .letter-content p {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   line-height: 1.8;
   margin-bottom: 2rem;
 }
@@ -76,7 +77,7 @@
 /* The signature at the end */
 .signature {
   margin-top: 4rem;
-  font-size: 2.8rem;
+  font-size: 2rem;
   
   /* --- Staggered Animation Delay --- */
   animation-delay: 1.8s; /* The signature appears last */

@@ -4,15 +4,15 @@
   min-height: 100vh;
   padding: 120px 2rem 4rem 2rem;
   box-sizing: border-box;
-  background-color: #2D3748;
-  color: #E2E8F0;
+  background-color: #F5F4F8;
+  color: #54426B;
 }
 
 .page-title, .page-subtitle, .page-subsubtitle {
   text-align: center;
 }
 .page-title { font-size: 3rem; font-weight: 900; margin-bottom: 0.5rem; }
-.page-subtitle { font-size: 1.1rem; color: #A0AEC0; margin-top: 0; margin-bottom: 0rem; }
+.page-subtitle { font-size: 1.1rem; color: #8D72A1; margin-top: 0; margin-bottom: 0rem; }
 .page-subsubtitle { font-size: .75rem; color: #A0AEC0; margin-top: 0; margin-bottom: 4rem; }
 
 .coupons-grid {
@@ -25,11 +25,11 @@
 
 /* --- THE NEW COUPON DESIGN --- */
 .coupon-container {
-  background-color: #4A5568;
+  background-color: white;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   border-top: 5px solid; /* The color will be set by inline style */
   height: 220px;
   transition: all 0.3s ease; /* A smooth transition for all changes */
@@ -38,19 +38,19 @@
 /* --- THIS IS THE STYLE FOR A REDEEMED COUPON --- */
 .coupon-container.is-redeemed {
   /* Make it look "used" by making it less prominent */
-  opacity: 0.6;
-  background-color: #38495a; /* A darker background */
+  opacity: 0.4;
+  background-color: white; /* A darker background */
 }
 
 .coupon-header { padding: 1rem 1.5rem; }
-.coupon-header h3 { margin: 0; font-size: 1.4rem; color: white; }
+.coupon-header h3 { margin: 0; font-size: 1.4rem; color: #54426B; }
 .coupon-body { padding: 0 1.5rem; flex-grow: 1; }
-.coupon-body p { margin: 0; font-size: 1rem; color: #A0AEC0; }
+.coupon-body p { margin: 0; font-size: 1rem; color: #8D72A1; }
 .coupon-footer { padding: 1rem 1.5rem; text-align: right; }
 
 .redeem-btn {
-  background-color: #a3b3ff;
-  color: #1A202C;
+  background-color: #54426B;
+  color: white;
   border: none;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
@@ -66,11 +66,12 @@
 .redeemed-text {
   font-size: 1rem;
   font-weight: bold;
-  color: #2ecc71; /* A nice green to indicate success */
+  color: #2ecc71;
+  border-color: #2ecc71;
+  background-color: rgba(46, 204, 113, 0.1);
   padding: 0.6rem 1.2rem;
   border: 1px solid #2ecc71;
-  border-radius: 6px;
-  background-color: rgba(46, 204, 113, 0.1);
+  
 }
 
 /* --- The Reset button styling remains the same --- */
