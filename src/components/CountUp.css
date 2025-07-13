@@ -1,34 +1,44 @@
 /* In src/components/CountUpTimer.css */
 
+/*
+  The main container for the timer.
+  It remains transparent to blend in with the header.
+*/
 .countup-timer {
   display: flex;
-  gap: 1rem; /* Space between days, hours, etc. */
-  /* background-color: rgba(0, 0, 0, 0.2); /* A subtle dark background */
-  /* padding: 0.5rem 1rem;
-  border-radius: 8px;
-  border: 1px solid rgba(226, 232, 240, 0.1); Very subtle border */
+  gap: 1.2rem; /* A little more space for a cleaner look */
 }
 
+/* 
+  A container for each individual number/label pair (e.g., "120 days").
+*/
 .time-block {
   display: flex;
-  align-items: baseline; /* Aligns the number and the label nicely */
+  align-items: baseline;
   gap: 0.3rem;
-  color: #E2E8F0; /* Your off-white text color */
+  
+  /* --- KEY CHANGE --- */
+  /* The text is now your dark plum color for readability on a light background */
+  color: #54426B; 
 }
 
+/*
+  The large number value (e.g., "120")
+*/
 .time-value {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1;
-  color: #E2E8F0; /* Keep the bright text color */
+  text-shadow: 0 0 4px rgba(216, 80, 214, 0.3); /* A very faint, vibrant orchid glow */
 
-  /* --- ADD THIS LINE FOR A SUBTLE GLOW --- */
-  text-shadow: 0 0 10px rgba(163, 179, 255, 0.5); /* A soft blue-white glow */
 }
 
+/*
+  The small text label (e.g., "days")
+*/
 .time-label {
   font-size: 0.75rem;
-  font-weight: 500;
-  opacity: 0.7; /* Makes the label less prominent than the number */
+  font-weight: 600; /* A bit bolder to be more readable */
+  opacity: 0.8; /* Slightly less transparent */
   text-transform: uppercase;
 }

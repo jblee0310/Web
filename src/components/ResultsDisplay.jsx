@@ -1,5 +1,7 @@
-import { discoveryItems } from '../discoveryData';
+import { discoveryItems } from '../DiscoveryData';
 import './ResultsDisplay.css';
+import Header from '../components/Header.jsx';
+
 
 // The component now only needs a simple onClick handler prop
 function ResultsDisplay({ myChoices, herChoices, onModifyClick }) {
@@ -23,10 +25,11 @@ function ResultsDisplay({ myChoices, herChoices, onModifyClick }) {
   return (
     <div className="results-container">
       <div className="results-header">
+        <Header />
         <h1 className="preference-title">TMI 결과</h1>
         {/* This button's only job is to call the function passed from the parent */}
         <button className="modify-btn" onClick={onModifyClick}>
-          Modify
+          변경하기
         </button>
       </div>
       

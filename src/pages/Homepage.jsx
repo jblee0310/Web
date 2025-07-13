@@ -85,6 +85,7 @@ function HomePage() {
           {timelineData.map((data, idx) => (
             <TimelineItem data={data} index={idx} key={idx} />
           ))}
+          
         </div>
       </section>
     </>

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import ResultsDisplay from '../components/ResultsDisplay';
-import { discoveryItems, myChoices } from '../discoveryData';
+import { discoveryItems, myChoices } from '../DiscoveryData';
 import { db } from '../firebase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import './DiscoveryPage.css';
@@ -51,7 +51,7 @@ function DiscoveryPage() {
   };
   
   const handleReset = () => {
-    if (window.confirm("Are you sure you want to reset all choices? This cannot be undone.")) {
+    if (window.confirm("왜 초기화 시킬려고 해.")) {
       const docRef = doc(db, "preferences", "girlfriendChoices");
       setDoc(docRef, {});
       setHerChoices({});

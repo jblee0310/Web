@@ -2,8 +2,9 @@
   min-height: 100vh;
   padding: 120px 2rem 2rem 2rem;
   box-sizing: border-box;
-  background: linear-gradient(135deg, #27374D, #526D82);
-  color: #E2E8F0;
+  /* background: linear-gradient(135deg, #27374D, #526D82); */
+  background-color: #F5F4F8; /* Light background */
+  color: #54426B; /* Dark text */
 }
 
 .page-title {
@@ -17,7 +18,7 @@
   display: block;  
   text-align: center;
   font-size: 1.1rem;
-  color: #A0AEC0;
+  color: #8D72A1;
   margin-top: 0;
   margin-bottom: 4rem;
 }
@@ -39,10 +40,10 @@
 
 /* Individual letter box styling */
 .letter-box {
-  background-color: #1b263b;
+  background-color: white;
   border-radius: 8px;
-  border: 1px solid rgba(163, 179, 255, 0.2);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(84, 66, 107, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   overflow: hidden; /* This is crucial for the animation */
   cursor: pointer;
   transition: all 0.3s ease;
@@ -51,7 +52,7 @@
 .letter-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  border-color: rgba(163, 179, 255, 0.5);
+  border-color: rgba(84, 66, 107, 0.4);
 }
 
 .letter-title-container {
@@ -69,7 +70,7 @@
 .arrow-icon {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #a3b3ff;
+  color: #D850D6;
   transition: transform 0.4s ease;
 }
 
@@ -95,6 +96,8 @@
 /* This inner div prevents content from being squashed during animation */
 .letter-body {
   overflow: hidden;
+  border-top-color: rgba(84, 66, 107, 0.1);
+
 }
 
 .letter-body p {
@@ -115,14 +118,14 @@
 .letter-full-title {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #E2E8F0;
+  color: #54426B;
   margin: 0 0 1.5rem 0;
 }
 
 .letter-main-body {
   font-size: 1rem;
   line-height: 1.7;
-  color: #A0AEC0;
+  color: #8D72A1;
   margin: 0 0 1.5rem 0;
   white-space: pre-wrap; /* This respects line breaks if you add them in the string */
 }
@@ -130,9 +133,9 @@
 .letter-final-thought {
   font-size: 1rem;
   line-height: 1.7;
-  color: #E2E8F0; /* Make it slightly brighter to stand out */
+  color: #54426B; /* Make it slightly brighter to stand out */
   font-style: italic;
   margin: 0;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(160, 174, 192, 0.2);
+  border-top: 1px solid rgba(84, 66, 107, 0.1);
 }
