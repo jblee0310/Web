@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import Header from '../components/Header.jsx';
 import './HomePage.css';
+import { Link } from 'react-router-dom';
+
 
 // Import your images (make sure these paths are correct)
 import photo1 from '../assets/1.jpg';
@@ -54,9 +56,9 @@ function HomePage() {
             <p className="main-description">
               
             </p>
-            <a href="/letter" className="letter">
+            <Link to="/letter" className="letter">
               100일 편지 읽기
-            </a>
+            </Link>
             <a href="#timeline" className="letter">
               타임라인 보기
             </a>
