@@ -77,12 +77,13 @@
   width: 100%; /* It will be 100% of the column, up to 500px */
   
   background-color: transparent;
-  padding: 10px; 
+  padding: 5px; 
   border-radius: 12px;
   position: relative;
   z-index: 1;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border: none; /* Remove the old border */
+  border: 50 px; /* Remove the old border */
+  margin-top: 1.75rem;
 
 }
 

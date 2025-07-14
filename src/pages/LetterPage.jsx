@@ -1,11 +1,42 @@
 import Header from '../components/Header';
 import './LetterPage.css';
+import { useState } from 'react'; // We need useState for this
+
 
 function LetterPage() {
+  // 1. To track if she has entered the correct password
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // 2. To store what she is typing in the input field
+  const [passwordInput, setPasswordInput] = useState('');
+  // 3. To show an error message if the password is wrong
+  const [error, setError] = useState('');
+
+  // --- THE SECRET PASSWORD ---
+  // IMPORTANT: Change this to your secret password! It should be something she knows.
+  const CORRECT_PASSWORD = "coco0406"; 
+
+  // --- HANDLER FUNCTION for the form submission ---
+  const handlePasswordSubmit = (event) => {
+    // a. Prevent the page from reloading when the form is submitted
+    event.preventDefault(); 
+    
+    // b. Check if the typed password is correct
+    if (passwordInput === CORRECT_PASSWORD) {
+      // If correct, set authenticated to true to show the letter
+      setIsAuthenticated(true);
+      setError(''); // Clear any previous errors
+    } else {
+      // If incorrect, show an error message and clear the input
+      setError('땡 :(');
+      setPasswordInput('');
+    }
+  };
   return (
     <>
       <Header />
       <div className="letter-page-container">
+
+        {isAuthenticated ?(
         <div className="letter-content">
           <h1>주연이에게,</h1>
           <p>
@@ -40,6 +71,25 @@ function LetterPage() {
             100일을 기념하며, 종빈이가
           </div>
         </div>
+        ): (
+          // IF AUTHENTICATED IS FALSE, SHOW THE PASSWORD FORM
+          <div className="password-form-container">
+            <form onSubmit={handlePasswordSubmit}>
+              <h2>100일 편지</h2>
+              <p>비밀번호를 입력해주세요</p>
+              <input
+                type="password"
+                value={passwordInput}
+                onChange={(e) => setPasswordInput(e.target.value)}
+                placeholder="Password"
+              />
+              <button type="submit">편지보기</button>
+              
+              {/* This will only show the error message if it exists */}
+              {error && <p className="error-message">{error}</p>}
+            </form>
+          </div>
+        )}
       </div>
     </>
   );

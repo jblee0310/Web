@@ -113,3 +113,74 @@
     font-size: 2.2rem;
   }
 }
+
+.password-form-container {
+  /* Center the form on the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.password-form-container form {
+  background-color: white;
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+}
+
+.password-form-container h2 {
+  color: #54426B;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.password-form-container p {
+  color: #8D72A1;
+  margin-bottom: 2rem;
+}
+
+.password-form-container input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: 1px solid #dcd7e7;
+  border-radius: 8px;
+  box-sizing: border-box; /* Important for padding and width */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.password-form-container input:focus {
+  outline: none;
+  border-color: #D850D6;
+  box-shadow: 0 0 0 3px rgba(216, 80, 214, 0.2);
+}
+
+.password-form-container button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  
+  /* Using your theme's colors */
+  background-color: #54426B;
+  color: white;
+  transition: background-color 0.2s;
+}
+.password-form-container button:hover {
+  background-color: #3d2d4f;
+}
+
+.error-message {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  color: #e53e3e; /* A standard error red */
+  font-weight: bold;
+}
