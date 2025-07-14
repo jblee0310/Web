@@ -1,13 +1,9 @@
-/*
-  This is the complete CSS for your header layout, with individually
-  framed buttons and a right-aligned 'z' button.
-*/
+/* In src/components/Header.css */
 
 /* ========================================================= */
-/* 1. Main Header Container Styling                          */
+/* 1. Desktop Header Styles (Default for larger screens)     */
 /* ========================================================= */
 .main-header {
-  /* Positioning and Sizing */
   position: absolute;
   top: 0;
   left: 0;
@@ -15,88 +11,101 @@
   height: 75px;
   z-index: 10;
   box-sizing: border-box;
-  
-  /* Background should be transparent to show the page gradient */
-  /* background: transparent; */
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  
-  /* Padding creates the space at the edges of the screen */
-  padding: 0 2rem;
-
-  /* --- Flexbox Layout --- */
+  padding: 0 1.5rem; /* A little less padding for a tighter feel */
   display: flex;
-  align-items: center; /* Vertically centers everything */
-  gap: .7rem;       /* The default space between items on the left */
+  align-items: center;
+  gap: 0.7rem;
 }
 
-
-/* ========================================================= */
-/* 2. General Text and Link Styling                          */
-/* ========================================================= */
-
-/* Style for the main "brand" link */
+/* Brand Link */
 .main-header > a:first-of-type {
-  color: #54426B; /* Your requested font color */
+  color: #54426B;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
-  /* Remove any button styling from the main name link */
-  background: none;
-  border: none;
-  box-shadow: none;
-  padding: 0;
+  white-space: nowrap;
 }
 .main-header > a:first-of-type:hover {
-  color: #3d2d4f; /* A slightly brighter hover */
+  color: #3d2d4f;
 }
 
-/* Style for the "|" separator */
+/* Separator */
 .nav-separator {
   color: #54426B;
   opacity: 0.5;
   font-size: 1.5rem;
 }
 
-
-/* ========================================================= */
-/* 3. The Framed Button Style (`.nav-button`)                */
-/* ========================================================= */
-
+/* Framed Buttons */
 .nav-button {
-  /* Text styling */
   color: #54426B;
   border: 1px solid rgba(84, 66, 107, 0.3);
   background-color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 600;
-  
-  /* The "Pill" shape and frame */
   padding: 0.25rem 1rem;
   border-radius: 50px;
-  
-  /* Smooth transition for hover effects */
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
-
 .nav-button:hover {
   background-color: rgba(255, 255, 255, 0.9);
   border-color: rgba(84, 66, 107, 0.7);
-  transform: translateY(-2px); /* Lifts the button slightly */
+  transform: translateY(-2px);
 }
 
-
-/* ========================================================= */
-/* 4. The Positioning Magic for the Right-Side Button        */
-/* ========================================================= */
-
+/* Positioning for desktop */
 .nav-item-right {
-  /* This tells this specific button to take all available space to its left */
   margin-left: auto;
 }
-
 .timer-container {
   margin-left: auto;
+}
+
+/* ========================================================= */
+/* 2. Mobile Header Styles (For screens 850px or less)       */
+/* ========================================================= */
+@media screen and (max-width: 850px) {
+  .main-header {
+    /* Allow the header to grow taller and wrap content */
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items when they wrap */
+    padding: 0.75rem 1rem;
+    gap: 0.5rem 1rem; /* Control vertical and horizontal gap */
+  }
+
+  /* On mobile, we don't want to push items to the side with margin */
+  .timer-container,
+  .nav-item-right {
+    margin-left: 0;
+  }
+  
+  /* Make the timer part of the main flow */
+  .timer-container {
+    /* This makes it a natural part of the flex wrap order */
+    order: 3; /* You can use this to re-order items if needed */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Make action buttons group together */
+  .nav-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  /* Reduce font sizes for mobile */
+  .main-header > a:first-of-type {
+    font-size: 1.2rem;
+  }
+  .nav-button {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.75rem;
+  }
 }
